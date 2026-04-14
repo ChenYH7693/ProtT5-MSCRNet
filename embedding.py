@@ -5,7 +5,7 @@
 import os
 from pathlib import Path
 def setup_environment():
-    os.environ['HF_TOKEN'] = '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'
+    os.environ['HF_TOKEN'] = ''
     user = os.environ.get("USER", "user")
 
     base_tmp = f"/data/SJNDATA/tmp/{user}"
