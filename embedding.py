@@ -4,20 +4,7 @@
 # =====================================
 import os
 from pathlib import Path
-def setup_environment():
-    os.environ['HF_TOKEN'] = ''
-    user = os.environ.get("USER", "user")
 
-    base_tmp = f"/data/SJNDATA/tmp/{user}"
-    hf_home = f"{base_tmp}/hf"
-
-    Path(hf_home).mkdir(parents=True, exist_ok=True)
-    os.environ["HF_HOME"] = hf_home
-    os.environ["TRANSFORMERS_CACHE"] = f"{hf_home}/transformers"
-
-    print(f"[System] Cache path set to: {hf_home}")
-
-setup_environment()
 # =========================================================
 # Frozen ProtT5 + CNN + Transformer for ACP Classification
 # =========================================================
